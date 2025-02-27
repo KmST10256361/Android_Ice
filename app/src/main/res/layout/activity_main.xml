@@ -11,23 +11,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <EditText
         android:id="@+id/editBILL"
         android:layout_width="233dp"
         android:layout_height="65dp"
         android:layout_marginEnd="80dp"
         android:ems="10"
-        android:inputType="text"
         android:hint="Enter the bill amount"
+        android:inputType="text"
         android:padding="10dp"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.42" />
-
+        app:layout_constraintVertical_bias="0.325" />
 
     <TextView
         android:id="@+id/editHello"
@@ -36,23 +36,23 @@
         android:text="Welcome to tip calculator"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.053" />
 
     <Button
         android:id="@+id/calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="140dp"
+        android:layout_marginEnd="148dp"
         android:text="Calculate"
 
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.727" />
+        app:layout_constraintVertical_bias="0.835" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -99,9 +99,32 @@
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/calculate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.694"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editBILL"
-        app:layout_constraintVertical_bias="0.681" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editnumpeps"
+        android:layout_width="323dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="Enter number of people to split bill"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/calculate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="249dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="37dp"
+        android:text="Enter number of people below if needed"
+        app:layout_constraintBottom_toTopOf="@+id/editnumpeps"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

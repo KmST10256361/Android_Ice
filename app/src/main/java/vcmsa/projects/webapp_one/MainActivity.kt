@@ -36,6 +36,8 @@ class MainActivity : AppCompatActivity() {
 
         val txtbillshow =findViewById<TextView>(R.id.textviewtip)
 
+        val edtpeps = findViewById<EditText>(R.id.editnumpeps)
+
         btncal.setOnClickListener {
 
             try {
@@ -44,14 +46,46 @@ class MainActivity : AppCompatActivity() {
 
                 val tippercent = edtTipamot.text.toString().toDouble()
 
-                val finalPAY = billAmt * (tippercent / 100)
+                val finalPAYtip = billAmt * (tippercent / 100) // cal tip
 
-                txtbillshow.text = "Tip amount R${String.format("%.2f", finalPAY)}"
+                //split below
+
+
+
+                    val tipspilt = edtpeps.text.toString().toInt()
+
+                    if ( tipspilt ==0 || tipspilt == null   ){
+
+                        txtbillshow.text ="The value for people is invalid "
+                    }else   {
+
+
+                        val PAY=billAmt+finalPAYtip
+
+                        val finalpay=PAY/tipspilt
+
+
+                        txtbillshow.text = "Tip amount R${String.format("%.2f", finalpay)}"
+
+                    }
+
+
+
+
 
             } catch (e: NumberFormatException)
             {
 
-                txtbillshow.text ="The vales are in valid "
+                val billAmt = edtBILLamt.text.toString().toDouble()
+
+                val tippercent = edtTipamot.text.toString().toDouble()
+
+                val finalPAYtip = billAmt * (tippercent / 100) // cal tip
+
+               val onepep = billAmt+finalPAYtip
+
+                txtbillshow.text = "Tip amount R${String.format("%.2f", onepep)}"
+
 
             }
 
